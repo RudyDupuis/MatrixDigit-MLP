@@ -1,6 +1,6 @@
 import numpy as np
 
-LABELS = np.arange(10)
+LABELS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 DATA_RAW = {
     0: [
@@ -78,8 +78,7 @@ DATA_RAW = {
 
 def get_dataset():
     flattened_images = np.array([np.array(DATA_RAW[int(i)]).flatten() for i in LABELS])
-    flattened_labels = np.array(LABELS)
-    return flattened_images, flattened_labels
+    return flattened_images, LABELS
 
 
 def display_digit(vector: np.ndarray):
